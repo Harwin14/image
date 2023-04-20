@@ -57,7 +57,7 @@ export const updateProduct = async (req, res) => {
     });
     if (!product) return res.status(404).json({ msg: 'No Data Found' });
     let fileName = '';
- 
+  
     if (req.files === null) {  
         fileName = Product.image;
     } else {
