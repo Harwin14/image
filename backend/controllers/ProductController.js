@@ -67,7 +67,7 @@ export const updateProduct = async (req, res) => {
         const ext = path.extname(file.name);
         fileName = file.md5 + timeStamp +ext;  
         const allowedType = ['.png', '.jpg', '.jpeg'];  
-   
+    
         if (!allowedType.includes(ext.toLowerCase()))
             return res.status(422).json({ msg: 'Invalid Images' });
         if (fileSize > 5000000)
