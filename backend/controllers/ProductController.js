@@ -65,7 +65,7 @@ export const updateProduct = async (req, res) => {
         const file = req.files.file;
         const fileSize = file.data.length;
         const ext = path.extname(file.name);
-        fileName = file.md5 + timeStamp +ext; 
+        fileName = file.md5 + timeStamp +ext;  
         const allowedType = ['.png', '.jpg', '.jpeg'];  
    
         if (!allowedType.includes(ext.toLowerCase()))
